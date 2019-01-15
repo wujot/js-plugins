@@ -26,6 +26,8 @@
 		<!-- Progress Bar -->
 		<div class="progress-bar"></div>
 
+		<!-- Google Map -->
+		<div id="map"></div>
 
 		<!-- Slides List -->
 		<script id="template-slide-list" type="x-tmpl-mustache">
@@ -45,6 +47,9 @@
 		</script>
 
 
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUTPydGAimC-c88u_WQ1kCTegpHY52eM&callback=initMap">
+		    </script>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -53,27 +58,32 @@
 				{
 					image: 'images/camden-town.jpg', 
 					title: 'Camden Town',
-					description: 'xcxc'
+					description: 'xcxc',
+					coords: {lat: 51.539011, lng: -0.142555}
 				},
 				{
 					image: 'images/brixton.jpg', 
 					title: 'Brixton',
-					description: 'xcxc'
+					description: 'xcxc',
+					coords: {lat: 51.461274, lng: -0.129111}
 				},
 				{
 					image: 'images/canary-wharf.jpg', 
 					title: 'Canary Wharf',
-					description: 'xcxc'
+					description: 'xcxc',
+					coords: {lat: 51.503173, lng: -0.028281}
 				},
 				{
 					image: 'images/oxford-street.jpg', 
 					title: 'Oxford Street',
-					description: 'xcxc'
+					description: 'xcxc',
+					coords: {lat: 51.517473, lng: -0.154012}
 				},
 				{
 					image: 'images/london-city.jpg', 
 					title: 'London City',
-					description: 'xcxc'
+					description: 'xcxc',
+					coords: {lat: 51.505494, lng: -0.136031}
 				}
 			];
 		</script>
