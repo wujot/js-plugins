@@ -19,56 +19,74 @@
 	<body>
 		
 		<!-- Carousel -->
-		<div class="main-carousel">
-		  <div class="carousel-cell" id="carousel-cell1" style="background-image: url('images/camden-town.jpg');">
-		  	<div class="container">
-		  		<h1>
-		  			Camden Town
-		  		</h1>
-		  	</div>
-		  </div>
-		  <div class="carousel-cell" id="carousel-cell2" style="background-image: url('images/brixton.jpg');">
-		  	<div class="container">
-		  		<h1>
-		  			Brixton
-		  		</h1>
-		  	</div>
-		  </div>
-		  <div class="carousel-cell" id="carousel-cell3" style="background-image: url('images/canary-wharf.jpg');">
-		  	<div class="container">
-		  		<h1>
-		  			Canary Wharf
-		  		</h1>
-		  	</div>
-		  </div>
-		  <div class="carousel-cell" id="carousel-cell4" style="background-image: url('images/oxford-street.jpg');">
-		  	<div class="container">
-		  		<h1>
-		  			Oxford Street
-		  		</h1>
-		  	</div>
-		  </div>
-		  <div class="carousel-cell" id="carousel-cell5" style="background-image: url('images/london-city.jpg');">
-		  	<div class="container">
-		  		<h1>
-		  			London City
-		  		</h1>
-		  	</div>
-		  </div>
+		<div class="main-carousel" id="results">
+		  
 		</div>
 
 		<!-- Progress Bar -->
 		<div class="progress-bar"></div>
 
 
+		<!-- Slides List -->
+		<script id="template-slide-list" type="x-tmpl-mustache">
+		{{{slides}}}
+		</script>
+
+		<!-- Slide Template -->
+		<script id="template-slide-item" type="x-tmpl-mustache">
+			<div class="carousel-cell" style="background-image: url('{{ image }}');">
+		  	<div class="container">
+		  		<h1>
+		  			{{ title }}
+		  			{{ description }}
+		  		</h1>
+		  	</div>
+		  </div>
+		</script>
+
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    	 	<script>
+			var slides = [
+				{
+					image: 'images/camden-town.jpg', 
+					title: 'Camden Town',
+					description: 'xcxc'
+				},
+				{
+					image: 'images/brixton.jpg', 
+					title: 'Brixton',
+					description: 'xcxc'
+				},
+				{
+					image: 'images/canary-wharf.jpg', 
+					title: 'Canary Wharf',
+					description: 'xcxc'
+				},
+				{
+					image: 'images/oxford-street.jpg', 
+					title: 'Oxford Street',
+					description: 'xcxc'
+				},
+				{
+					image: 'images/london-city.jpg', 
+					title: 'London City',
+					description: 'xcxc'
+				}
+			];
+		</script>
+
+		<!-- Mustache Scripts -->
+  	 	<script src="vendor/mustache.js"></script>
 
     	<!-- JQuery Scripts -->
   	 	<script src="vendor/flickity.pkgd.min.js"></script>
 
     	<!-- JQuery Scripts -->
   	 	<script src="js/script.js"></script>
+
 	</body>
 </html> 
  
