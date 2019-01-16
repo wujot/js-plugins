@@ -1,32 +1,9 @@
-body {
-  margin: 0 auto;
-}
+body { margin: 0 auto; }
 
-.carousel-cell {
-  width: 100%;
-  /* full width */
-  height: 80vh;
-  /* height of carousel */
-  margin-right: 10px;
-  background-size: cover;
-}
+.carousel-cell { width: 100%; /* full width */ height: 80vh; /* height of carousel */ margin-right: 10px; background-size: cover; }
 
-.carousel-cell h1 {
-  color: white;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 50px;
-  boredr-radius: 6px;
-  max-width: 200px;
-}
+.carousel-cell h1 { color: white; background: rgba(0, 0, 0, 0.4); padding: 50px; boredr-radius: 6px; max-width: 200px; }
 
-.progress-bar {
-  height: 20px;
-  width: 0;
-  background: #333;
-}
+.progress-bar { height: 20px; width: 0; background: #333; }
 
-#map {
-  height: 200px;
-  width: 100%;
-}
-/*# sourceMappingURL=style.css.map */
+#map { height: 200px; width: 100%; }

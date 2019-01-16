@@ -36,7 +36,7 @@ var flkty = new Flickity( '.main-carousel', {
 
 });
 
-var progressBar = document.querySelector('.progress-bar')
+var progressBar = document.querySelector('.progress-bar');
 
 flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
@@ -56,6 +56,8 @@ flkty.on( 'scroll', function( progress ) {
 			center: uluru
 		});
 
+
+
 		for(var i = 0; i < slides.length; i++){ 
 			// Definiujemy marker jako nową instancję obiektu Marker.
 			var marker = new google.maps.Marker({
@@ -63,8 +65,20 @@ flkty.on( 'scroll', function( progress ) {
 				position: slides[i].coords,
 				map: map
 			}); 
+			
+
+			marker.addListener('click', function() {
+
+				flkty.select(i);
+				/*
+				console.log(i);
+				*/
+	        });
+	        /*
+			console.log(i);
+			*/
 		}
 		
 	}	
-
+	
 })(); 
