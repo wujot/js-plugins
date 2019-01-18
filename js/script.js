@@ -56,29 +56,19 @@ flkty.on( 'scroll', function( progress ) {
 			center: uluru
 		});
 
+		for (var i = 0; i < slides.length; i++) {
 
+		    var marker = new google.maps.Marker({
+		      position: slides[i].coords,
+		      map: map
+		    });
 
-		for(var i = 0; i < slides.length; i++){ 
-			// Definiujemy marker jako nową instancję obiektu Marker.
-			var marker = new google.maps.Marker({
-				// I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
-				position: slides[i].coords,
-				map: map
-			}); 
-			
-
-			marker.addListener('click', function() {
-
-				flkty.select(i);
-				/*
-				console.log(i);
-				*/
-	        });
-	        /*
-			console.log(i);
-			*/
-		}
-		
+		    google.maps.event.addListener(marker, 'click', (function (i) {
+		      return function () {
+		        flkty.select(i);
+		      }
+		    })(i));
+		  };
 	}	
 	
 })(); 
